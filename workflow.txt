@@ -1,0 +1,129 @@
+
+
+Code  Data  workflow.txt
+
+./Code:
+All_data_figures.py                       get_R0_prediction.py
+Big_spreadsheet.py                        get_R0.py
+correlations_between_social_variables.py  get_weight.py
+Correlation_table_for_main.py             heterogeneity_MSE.py
+Correlation_tables.py                     Louvain.py
+get_data.py                               pickles
+get_degree.py                             Social_fluidity_figure_2.py
+get_modularity.py                         temporal_simulation_4.py
+get_phi.py                                Theory_figures.py
+get_prediction_error.py
+
+./Code/pickles:
+prediction_error_pickles  R0_pickles  R0_prediction_pickles
+
+./Code/pickles/prediction_error_pickles:
+
+./Code/pickles/R0_pickles:
+
+./Code/pickles/R0_prediction_pickles:
+
+./Data:
+raw_data_and_formatting_codes  Static_networks_converted
+Static_networks                Temporal_networks
+
+./Data/raw_data_and_formatting_codes:
+ant_antennal_contact  Human_face_to_face    parakeet_aggression
+Ant_trophallaxis      Kangaroo_association  shark_association
+bat_food_sharing      Matrix_formatting.py  sheep_aggression
+bee_trophallaxis      monkey_aggression     swallow_association
+bison_aggression      monkey_association
+cattle_aggression     monkey_grooming
+
+./Data/raw_data_and_formatting_codes/ant_antennal_contact:
+blonder_ants_1_1.txt  blonder_ants_3_1.txt        journal.pone.0020298.PDF
+blonder_ants_1_2.txt  blonder_ants_6_1.txt        journal.pone.0020298.s007.doc
+blonder_ants_2_1.txt  blonder_ants_6_2.txt        journal.pone.0020298.s008.PDF
+blonder_ants_2_2.txt  format_the_blonder_ants.py
+
+./Data/raw_data_and_formatting_codes/Ant_trophallaxis:
+Colony_1_trophallaxis_final.xlsx  elife-38473-v1(1).pdf
+Colony_2_trophallaxis_final.xlsx  Format_ant_data.py
+Colony_3_trophallaxis_final.xlsx
+
+./Data/raw_data_and_formatting_codes/bat_food_sharing:
+20122573.full.pdf  format_the_bats.py  mouth-licking_observations2012.csv
+
+./Data/raw_data_and_formatting_codes/bee_trophallaxis:
+1713568115.full.pdf  format_the_bees.py  trial1.txt
+
+./Data/raw_data_and_formatting_codes/bison_aggression:
+Bison_dominance_matrix.txt
+Lott - 1979 - Dominance Relations and Breeding Rate in Mature Male American Bison(1).pdf
+
+./Data/raw_data_and_formatting_codes/cattle_aggression:
+cattle_dominance_matrix.txt
+Schein, Fohrman - 1955 - Social Dominance Relationships in a Herd of Dairy Cattle.pdf
+
+./Data/raw_data_and_formatting_codes/Human_face_to_face:
+1-s2.0-S0022519310006284-main.pdf
+data_on_facetoface_contacts_in_an_office_building_suggest_a_lowcost_vaccination_strategy_based_on_community_linkers.pdf
+detailed_list_of_contacts_Hospital.dat
+format_Sociopatterns_household.py
+format_Sociopatterns.py
+High-School_data_2013.csv
+ht09_contact_list.dat
+journal.pone.0073970.PDF
+journal.pone.0107878.PDF
+journal.pone.0136497.PDF
+primaryschool.csv
+s12879-014-0695-9
+tij_InVS.dat
+
+./Data/raw_data_and_formatting_codes/Kangaroo_association:
+Grant - 1973 - Dominance and association (Macropus giganteus).pdf
+Kangaroo_proximity_matrix.txt
+
+./Data/raw_data_and_formatting_codes/monkey_aggression:
+DiachronicChangeintheDominanceRelationsofadultfemaleeJapanesemonkeys.pdf
+macaque_dominance_matrix.txt
+
+./Data/raw_data_and_formatting_codes/monkey_association:
+10764_2013_9695_MOESM1_ESM.docx  Howler_monkeys_matrix.txt
+679392.pdf                       Macaques_Massen_matrix.txt
+
+./Data/raw_data_and_formatting_codes/monkey_grooming:
+1972Sade_2_3_4_7_.pdf
+Macaques_Sade_matrix.txt
+stumptailed_macaque_matrix.txt
+Thestructureofaffiliativerelationshipsinaprimatecommunity1994.pdf
+
+./Data/raw_data_and_formatting_codes/parakeet_aggression:
+format_the_parakeets.py  journal.pcbi.1004411.PDF  parakeet.txt
+
+./Data/raw_data_and_formatting_codes/shark_association:
+170485.full.pdf       group_by_individual.csv
+format_the_sharks.py  rsbl20160824.pdf
+
+./Data/raw_data_and_formatting_codes/sheep_aggression:
+Sheep_dominance_matrix.txt  Social_status_in_female_bighorn_sheep_Ov.pdf
+
+./Data/raw_data_and_formatting_codes/swallow_association:
+Levin et al. - 2016 - Stress response.pdf  Swallow_proximity_edgelist.csv
+LevinSocialNetwork.csv                     Swallow_proximity_matrix.txt
+
+./Data/Static_networks:
+generate_time_series.py
+
+./Data/Static_networks_converted:
+
+./Data/Temporal_networks:
+ant_antennal_contact  bat_food_sharing  human_face_to_face
+ant_trophallaxis      bee_trophallaxis
+
+./Data/Temporal_networks/ant_antennal_contact:
+
+./Data/Temporal_networks/ant_trophallaxis:
+
+./Data/Temporal_networks/bat_food_sharing:
+
+./Data/Temporal_networks/bee_trophallaxis:
+
+./Data/Temporal_networks/human_face_to_face:
+
+

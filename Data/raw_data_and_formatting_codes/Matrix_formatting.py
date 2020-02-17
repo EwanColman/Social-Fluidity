@@ -21,8 +21,8 @@ for animal in animals:
     loc=animal.find('/')
     name=animal[loc+1:len(animal)]
     file=open(animal+'_matrix.txt', 'rb')
+    edge_dict={}
     
-    edge_list=[['ID1','ID2','Weight']]
     row=0
     for line in file:    
         line=str(line)
@@ -34,16 +34,22 @@ for animal in animals:
                 value=value+line[i]
             else:
                 if value!='':
-                    if int(value)>0:
-                        edge_list.append([row,col,int(value)])
+                    edge=tuple(sorted((row,col)))
+                    if edge not in edge_dict:
+                        edge_dict[edge]=int(value)
+                    else:
+                        edge_dict[edge]=edge_dict[edge]+int(value)
                     col=col+1
                 value=''  
     
         row=row+1    
+
     file.close()
     
     file=open('../Static_networks/'+name+'_edgelist.csv', 'w')
-    for edge in edge_list:
-        e_string=str(edge[0])+','+str(edge[1])+','+str(edge[2])+'\n'
-        file.write(e_string)
+    file.write('ID1,ID2,Weight\n')
+    for edge in edge_dict:
+        if edge_dict[edge]>0:
+            e_string=str(edge[0])+','+str(edge[1])+','+str(edge_dict[edge])+'\n'
+            file.write(e_string)
     file.close()

@@ -14,21 +14,11 @@ Data/raw_data_and_formatting_codes/Matrix_formatting.py
 
 This is the formatting file for all data sources that come in Matrix format
 
+%%% More info to add here %%%
 
-heterogeneity_MLE.py
+heterogeneity_MSE.py
 
-Performs the maximum likelihood estimation process for any give s vector and k vector
-
-
-Simulate_all_data.py
-
-Performs the simulation on all formatted data sets and stores the simulated mean individual reproductive number for each individual and stores it in Results
-
-
-Predict_all_data.py
-
-Computes the analytical mean individual reproductive number for each individual for all formatted data sets and stores it in Results
-
+Performs the minimum total squared error estimation process for any given s vector and k vector
 
 Make_big_table.py
 

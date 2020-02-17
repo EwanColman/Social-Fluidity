@@ -1,7 +1,6 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 
-threshold=0
+threshold=1
 for colony in ['1','2','6']:
     for session in ['1','2']:
         
@@ -36,11 +35,11 @@ for colony in ['1','2','6']:
                 gap=time_series[i]-time_series[i-1]
                 if gap>threshold:
                     end_time=time_series[i-1]
-                    new_df.loc[len(new_df)]=[ID1,ID2,start_time,end_time]
-                   
+                    new_df.loc[len(new_df)]=[ID1,ID2,start_time,end_time+threshold]      
                     start_time=time_series[i]
+            
             end_time=time_series[len(time_series)-1]
-            new_df.loc[len(new_df)]=[ID1,ID2,start_time,end_time]
+            new_df.loc[len(new_df)]=[ID1,ID2,start_time,end_time+threshold]
 
                 
         new_df.to_csv('../../Temporal_networks/ant_antennal_contact/antennation_'+colony+'_'+session+'_formatted.csv')
