@@ -1,5 +1,4 @@
 import get_data
-import heterogeneity_MLE as mle
 import heterogeneity_MSE as mse
 
 import pandas as pd

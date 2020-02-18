@@ -225,18 +225,18 @@ def dataframe(info,time_series='Poisson'):
         t_0=0
         delta_t=max(df['end_time'])
         phi_zero=1.2 
-        
-    elif data=='Macaques':
+
+    elif data=='Massen':
         species='Monkey'
-        interaction='Grooming'
+        interaction='Association'
         df=pd.read_csv('../Data/Static_networks_converted/'+info+'_'+time_series+'.csv',sep='\t')
         t_0=0
         delta_t=max(df['end_time'])
         phi_zero=0.5
         
-    elif data=='Massen':
+    elif data=='Macaques':
         species='Monkey'
-        interaction='Association'
+        interaction='Grooming'
         df=pd.read_csv('../Data/Static_networks_converted/'+info+'_'+time_series+'.csv',sep='\t')
         t_0=0
         delta_t=max(df['end_time'])

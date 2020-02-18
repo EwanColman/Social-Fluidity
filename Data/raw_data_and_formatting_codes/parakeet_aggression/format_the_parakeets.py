@@ -1,6 +1,6 @@
 import pandas as pd
 
-main_df=pd.read_csv('parakeet.txt',sep='\t')
+main_df=pd.read_csv('aggXquarter.txt',sep='\t')
 print(main_df.head())
 for g in ['1','2']:
     for q in range(1,5):

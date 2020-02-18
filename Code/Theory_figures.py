@@ -72,5 +72,5 @@ plt.yticks([0.8,1.2,1.6,2],[0.4,0.6,0.8,1],fontsize=fs)
 plt.text(-70,1.95,'B',size=25)
 
 fig.subplots_adjust(hspace=0.5,wspace=0.5)
-plt.savefig('../Write_up/Figures/disease_theory.pdf',format='pdf',bbox_inches='tight',dpi=256)
+plt.savefig('../Output/Figure3.pdf',format='pdf',bbox_inches='tight',dpi=256)
 # 

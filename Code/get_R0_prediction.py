@@ -1,5 +1,4 @@
 import get_data
-import heterogeneity_MLE as mle
 import pandas as pd
 import pickle as pk
 import numpy as np

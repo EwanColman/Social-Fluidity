@@ -82,7 +82,7 @@ print(table)
 
              
 # write text to file
-file=open('../Write_up/main_table.tex','w')
+file=open('../Output/main_table.tex','w')
 file.write(table)
 file.close()
 

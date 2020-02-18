@@ -45,7 +45,7 @@ for R_star in R_star_range:
         for g in [0,1,2]:
             row=row+',R0^Sim_R*='+str(R_star)+'_'+time_series+'_g='+str(g)
 
-file=open('../Write_up/Results.csv','w')
+file=open('../Output/Results.csv','w')
 
 file.write(row+'\n')
 

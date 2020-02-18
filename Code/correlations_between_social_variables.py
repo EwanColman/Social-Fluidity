@@ -38,7 +38,7 @@ clustering=[dic[d] for d in data_list]
 pearson, p=stats.pearsonr(strength,phi)
 print('strength and phi', pearson**2,p)
 
-# population size and phi
+# network size and phi
 pearson, p=stats.pearsonr(population,phi)
 print('population and phi', pearson**2,p)
 
@@ -54,11 +54,11 @@ print('phi and weight heterogeneity', pearson**2,p)
 pearson, p=stats.pearsonr(weight_heterogeneity,degree)
 print('weight heterogeneity and degree', pearson**2,p)
 
-
+# Modularity and phi
 pearson, p=stats.pearsonr(modularity,phi)
 print('modularity and phi', pearson**2,p)    
 
-
+# Weight heterogeneity and mean degree
 pearson, p=stats.pearsonr(clustering,phi)
 print('clustering and phi', pearson**2,p)    
 

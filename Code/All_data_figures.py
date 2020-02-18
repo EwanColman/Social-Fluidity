@@ -106,5 +106,5 @@ fig.text(0.45,-0.01, "Number of interactions observed ($s$)", size=fs)
 
 plt.tight_layout()
 fig.subplots_adjust(hspace=0.0,wspace=0.0)
-plt.savefig('../Write_up/Figures/Degree_vs_int.png', bbox_inches='tight',dpi=256)
+plt.savefig('../Output/FigureS1.png', bbox_inches='tight',dpi=256)
 

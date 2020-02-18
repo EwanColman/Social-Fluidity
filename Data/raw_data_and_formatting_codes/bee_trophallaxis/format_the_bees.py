@@ -1,52 +1,18 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 
+big_df=pd.read_csv('pnas.1713568115.sd01.txt',sep=',').dropna()
 
-old_df=pd.read_csv('trial1.txt',sep=',').dropna()
+for trial in range(1,6):
+    df=big_df[big_df['trial']==trial]
+    
+    new_df=pd.DataFrame()
 
+    new_df['ID1']=df['id1'].tolist()
+    new_df['ID2']=df['id2'].tolist()
+    
+    start_time=min(df['begin'])
+    new_df['start_time']=[(t-start_time)/1000 for t in df['begin'].tolist()]
 
-#print('start time:',min(df['begin']))
-#print('end time:',max(df['end']))
+    new_df['end_time']=[(t-start_time)/1000 for t in df['end'].tolist()]
 
-#print('duration',(max(df['end'])-min(df['begin']))/(60*60*1000))
-start_time=min(old_df['begin'])
-df=old_df[old_df['begin']<start_time+24*1000*60*60]
-ID_list=list(set(pd.concat([df['id1'],df['id2']])))
-
-print(len(ID_list))
-
-K=[len(set(pd.concat([df[df['id1']==ID]['id2'],df[df['id2']==ID]['id1']]))) for ID in ID_list]
-S=[len(pd.concat([df[df['id1']==ID]['id2'],df[df['id2']==ID]['id1']])) for ID in ID_list]  
- 
-plt.scatter(S,K)
-
-#        
-#        
-#        interaction_list=[]
-#        for i,row in df.iterrows():
-#            interaction_list.append(tuple(sorted([row['Actor'],row['Target']])))
-#        
-#        
-#        new_df=pd.DataFrame(columns=['ID1','ID2','start_time','end_time'])
-#        
-#        
-#        edge_list=list(set(interaction_list))
-#        for edge in edge_list:
-#            ID1=edge[0]
-#            ID2=edge[1]
-#            pair_df=df[((df['Actor']==ID1)&(df['Target']==ID2))|((df['Actor']==ID2)&(df['Target']==ID1))]
-#            time_series=pair_df['Time'].tolist()
-#            start_time=time_series[0]
-#
-#            for i in range(1,len(time_series)):
-#                gap=time_series[i]-time_series[i-1]
-#                if gap>threshold:
-#                    end_time=time_series[i-1]
-#                    new_df.loc[len(new_df)]=[ID1,ID2,start_time,end_time]
-#                   
-#                    start_time=time_series[i]
-#            end_time=time_series[len(time_series)-1]
-#            new_df.loc[len(new_df)]=[ID1,ID2,start_time,end_time]
-#
-#                
-#        new_df.to_csv('../../Temporal_networks/ant_antennal_contact/antennation_'+colony+'_'+session+'_formatted.csv')
+    new_df.to_csv('../../Temporal_networks/bee_trophallaxis/bees_'+str(trial)+'.csv')                

@@ -75,14 +75,14 @@ for interaction in position:
     keys=[data for data in data_list if int_type[data]==interaction]
     print(interaction,keys)
     closest_distance=0
-    while closest_distance<0.045:
+    while closest_distance<0.11:
         closest_pair=None
         closest_distance=1000
         for i in range(len(keys)):
             for j in range(i+1,len(keys)):
-                x1=x_value[keys[i]]*(2/7)
+                x1=x_value[keys[i]]#*(2/7)
                 y1=y_value[keys[i]]
-                x2=x_value[keys[j]]*(2/7)
+                x2=x_value[keys[j]]#*(2/7)
                 y2=y_value[keys[j]]
                 distance=np.sqrt((x1-x2)**2+(y1-y2)**2)
                 if distance<closest_distance:
@@ -146,7 +146,7 @@ ax.spines['bottom'].set_visible(False)
 #plt.text(-0.65,1.93,'A',size=25)
 plt.tight_layout()
 
-plt.savefig('../Write_up/Figures/interaction_types.pdf',format='pdf',bbox_inches='tight',dpi=256)   
+plt.savefig('../Output/Figure2.pdf',format='pdf',bbox_inches='tight',dpi=256)   
 
 #
 #
@@ -192,6 +192,6 @@ plt.savefig('../Write_up/Figures/interaction_types.pdf',format='pdf',bbox_inches
 #
 #ax.tick_params(labelsize=fs)
 #
-#plt.savefig('../Manuscript/Figures/all_R0_theory.png',bbox_inches='tight',dpi=256)   
+#plt.savefig('../Output/all_R0_theory.png',bbox_inches='tight',dpi=256)   
 
 

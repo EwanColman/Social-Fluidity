@@ -8,7 +8,7 @@ degree_values={}
 mean_strength_values={}
 population_values={}
 
-data_list=get_data.list_of_temporal_networks(bats=True)+get_data.list_of_static_networks()+get_data.twitter()
+data_list=get_data.list_of_temporal_networks(bats=True)+get_data.list_of_static_networks()
 for data in data_list:
 
     df,t_0,delta_t,species,interaction,phi_zero=get_data.dataframe(data)

@@ -4,10 +4,10 @@ Created on Wed Mar  8 16:13:39 2017
 
 @author: bansal
 """
-animals=['monkey_association/stumptailed_macaque',
+animals=['monkey_grooming/stumptailed_macaque',
+         'monkey_grooming/Macaques_Sade',
          'monkey_association/Howler_monkeys',
-         'monkey_association/Macaques_Sade',
-         'monkey_association/Macaques_Massen',
+         'monkey_association/Massen_Macaques',
          'monkey_aggression/macaque_dominance',
          'sheep_aggression/Sheep_dominance',
          'Kangaroo_association/Kangaroo_proximity',

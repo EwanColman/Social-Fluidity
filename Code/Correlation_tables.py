@@ -7,7 +7,7 @@ data_list=get_data.list_of_temporal_networks(bats=False)+get_data.list_of_static
 
 
 
-symbol={'R0^Est':'$R_{0}^{\\text{Est}}$','r_mean':'$\\bar{r(s_{i})}\\rangle$','phi':'$\phi$','population':'$N$','degree':'$\\bar{k}$','excess_degree':'$\\bar{k}+\sigma^{2}_{k}/\\bar{k}$','mean_strength':'$\\bar{s}$','mean_weight':'$\\bar{w}$','weight_heterogeneity':'$\sigma^{2}_{w}/\\bar{w}$','modularity':'$Q$','clustering':'$\\bar{C}$','fidelity':'$f_{\phi}$'}
+symbol={'R0^Est':'$R_{0}^{\\text{Est}}$','r_mean':'$\\bar{r}(s_{i})$','phi':'$\phi$','population':'$N$','degree':'$\\bar{k}$','excess_degree':'$\\bar{k}+\sigma^{2}_{k}/\\bar{k}$','mean_strength':'$\\bar{s}$','mean_weight':'$\\bar{w}$','weight_heterogeneity':'$\sigma^{2}_{w}/\\bar{w}$','modularity':'$Q$','clustering':'$\\bar{C}$','fidelity':'$f_{\phi}$'}
 names={'R0^Est':'Estimated rep. number','r_mean':'Mean individual rep. number','phi':'Social fluidity','population':'Network size','degree':'Mean degree','excess_degree':'Excess degree','mean_strength':'Mean strength','mean_weight':'Mean edge weight','weight_heterogeneity':'Edge weight heterogeneity','modularity':'Modularity','clustering':'Mean clustering','fidelity':'Fidelity'}
 
 #network_stats=['beta','Delta_I','population','mean_strength','degree','excess_degree','mean_weight','weight_heterogeneity','phi','R0_prediction','modularity','clustering']
@@ -95,7 +95,7 @@ for R_star in R_star_range:
     text=text+'\\newpage \n\n'
 text=text+'\end{document}'          
 # write text to file
-file=open('../Write_up/tables.tex','w')
+file=open('../Output/tables.tex','w')
 file.write(text)
 file.close()
 

@@ -5,7 +5,7 @@ for colony in ['1','2','6']:
     for session in ['1','2']:
         
         df=pd.read_csv('blonder_ants_'+colony+'_'+session+'.txt',sep=' ').dropna()
-        df=df.sort('Time')
+        df=df.sort_values('Time') # changed from sort()
         print(colony,session)
         
         ID_list=list(set(pd.concat([df['Actor'],df['Target']])))
