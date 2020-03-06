@@ -2,30 +2,105 @@ Python scripts to perform the data analysis are given. We performed the analysis
 
 The file 'Arcitecture.pdf' shows the file locations of the scripts that need to be executed to reproduce the analysis. Arrows show the dependencies on the existence of oter files and the new files created after execution.
 
+~~~~~
 
 Data/Data/raw_data_and_formatting_codes/
 
-This folder contains the data as it was obtained from the source, the paper associated with the data, and a formatting code (see below).
+This folder contains the data as it was obtained from the source, the paper associated with the data, and an executable formatting code (see below).
 
+~~~~~
 
 Data/Data/raw_data_and_formatting_codes/<study_system>/format_the_<animal>.py
 
 These scripts take the raw data as it was downloaded from the source and create files in a format suitible for our analysis. The formatted files are created in either Data/Static_networks or Data/Temporal_networks
 
+~~~~~
 
 Data/raw_data_and_formatting_codes/Matrix_formatting.py
 
-This is the formatting file for all data sources that come in Matrix format
+This is the formatting file for all data sources that come in Matrix format to convert them to an edge list
 
-%%% More info to add here %%%
+~~~~~
 
-heterogeneity_MSE.py
+Code/generate_time_series.py
 
-Performs the minimum total squared error estimation process for any given s vector and k vector
+Executable to turn the edge list for the static weighted networks (i.e. the ones that are not already temporal networks) into three different temporal networks. This is done using random variables so the outcome is different each time it is run.
+
+~~~~~
+
+Code/get_data.py
+
+last bit of formatting plus some other functions to make management of data a bit neater in the following scripts
+
+~~~~~
+
+Code/get_<something>.py
+
+These executable scripts take the formatted data and create pickle files (<something>.p). Note that get R0_prediction requres get_phi.py to already have been executed. get_prediction_error.py requires all other get_<something>.py scripts to have been executed.
+
+~~~~~
+
+Code/heterogeneity_MSE.py
+
+this is used in get_phi.py to find phi that gives the minimum total squared error (using Newton's Method) for any given s vector and k vector
+
+~~~~~
+
+Louvain.py
+
+computes maximium modularity. Full documentation at https://github.com/EwanColman/Louvain_community_detection
+
+~~~~~
+
+Temporal_simulation_4.py
+
+runs the simulation. This is a modification of the code found at https://github.com/EwanColman/Disease-simulation-on-temporal-network-data
+
+~~~~~
+
+correlations_between_social_variables.py
+
+computes correlations and prints them in the console
+
+~~~~~ 
+
+Correlation_tables.py
+
+Creates a latex document tables.tex ready to complied (e.g using >>pdflatex tables.tex in linux) 
+
+~~~~~
+
+Correlation_table_for_main.py
+
+produces a latex table (tabular environment) in the console (to be copy-[asted into the main manuscript document to make Table 1
+
+~~~~~
 
 Make_big_table.py
 
-Computes a variety of metrics used in the analysis and outputs them to table.csv. Should only be run after the simulations and predictions have been done.
+Computes a variety of metrics used in the analysis and outputs them to results.csv
+
+~~~~~
+
+Theory_figures.py
+
+Produces figure 3
+
+~~~~~
+
+All_data_figures.py
+
+
+Produces figure S1
+
+~~~~~
+
+Social_fluidity_figure_2.py
+
+produces figure 2
+
+
+
 
 
  
